@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: relative;
+  }
+
+  #logo {
+    background: url(../images/logo/logo-40.png) no-repeat left center;
+    width: 80px;
+    line-height: 40px;
+    position: absolute;
+    padding-left: 45px;
+    top: 0.5rem;
+    left: 0.75rem;
+    z-index: 1;
+  }
+
+  #nota {
+    text-align: center;
+  }
+  #nota img {
+    width: 100%;
+  }
+
+  #titulo {
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  #titulo-pastillas {
+    text-align: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+  }
+
