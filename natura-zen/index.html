@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniela_Faure-Martina_Rodríguez-Keiko_Yamakoshi_DMM2BV_Mañana2024</title>
-    <!--link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"-->
+    <title>Daniela_Faure-Martina_Rodríguez-Keiko_Yamakoshi_DMM2BV_Mañana_2024</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="minty/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/logo/short-icon.png" type="image/x-icon">
 </head>
 
 <body>
   <!-- navbar -->
-  <header class="fixed-top">
+  <header class="sticky-top">
 
     <h1 id="logo">NaturaZen</h1>
 
@@ -27,7 +27,7 @@
                 aria-label="Abrir menú de navegación">
           <span class="navbar-toggler-icon"></span>
         </button>
-        
+
         <div class="collapse navbar-collapse" id="navbarColor01">
           <ul class="navbar-nav ms-auto text-center">
             <li class="nav-item">
@@ -37,7 +37,7 @@
               <a class="nav-link" href="#articulo" data-ancla="60">Artículo</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#video" data-ancla="60">Video</a>
+              <a class="nav-link" href="#productos" data-ancla="60">Productos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#contacto" data-ancla="60">Contacto</a>
@@ -59,25 +59,33 @@
     <div class="carousel-inner">
       <div class="carousel-item active">
         <picture>
-          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_imagen-a.png">
-          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_imagen-a.png">
-          <img src="images/carousel/1.png" class="d-block w-100" alt="foto">
+          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_carousel1.png">
+          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_carousel1.png">
+          <img src="images/carousel/xl-xxl_carousel1.png" class="d-block w-100" alt="imagen01">
         </picture>
       </div>
 
       <div class="carousel-item">
         <picture>
-          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_imagen-b.png">
-          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_imagen-b.png">
-          <img src="images/carousel/2.png" class="d-block w-100" alt="foto">
+          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_carousel2.png">
+          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_carousel2.png">
+          <img src="images/carousel/xl-xxl_carousel2.png" class="d-block w-100" alt="imagen02">
         </picture>
       </div>
 
       <div class="carousel-item">
         <picture>
-          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_imagen-c.png">
-          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_imagen-c.png">
-          <img src="images/carousel/3.png" class="d-block w-100" alt="foto">
+          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_carousel3.png">
+          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_carousel3.png">
+          <img src="images/carousel/xl-xxl_carousel3.png" class="d-block w-100" alt="imagen03">
+        </picture>
+      </div>
+
+      <div class="carousel-item">
+        <picture>
+          <source media="(max-width: 576px)" srcset="images/carousel/xs-sm_carousel4.png">
+          <source media="(max-width: 992px)" srcset="images/carousel/md-lg_carousel4.png">
+          <img src="images/carousel/xl-xxl_carousel4.png" class="d-block w-100" alt="imagen04">
         </picture>
       </div>
     </div>
@@ -95,103 +103,156 @@
 
   <!-- seccion pastillas -->
   <section class="container"><span id="info" class="ancla"></span>
-    <h2 id="titulo-pastillas">info NaturaZen</h2>
+    <h2 id="titulo-pastillas">Info Naturazen</h2>
 
     <div class="row justify-content-evenly">
 
       <div class="col-9 col-md-5 col-xl py-3">
         <figure class="card">
           <picture>
-              <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastillas-img-a.png">
-              <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastillas-img-a.png">
-              <img src="images/pastillas/xl-xxl_pastillas-img-a.png" class="card-img-top" alt="nutricion">
+              <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastilla1.png">
+              <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastilla1.png">
+              <img src="images/pastillas/xl-xxl_pastilla1.png" class="card-img-top" alt="nutricion">
             <figcaption class="card-body">
               <h3 class="card-title">Nutrición y Recetas Saludables</h3>
               <p class="card-text">Recetas y consejos para una alimentación saludable, con opciones vegetarianas, veganas y sin gluten, y el uso de superalimentos para una dieta equilibrada.</p>
-              <a href="#" class="btn btn-primary float-end mb-3">Ver más</a>
+              <button type="button" class="btn btn-primary float-end mb-3" data-bs-toggle="modal" data-bs-target="#modal-nutricion">Ver más</button>
             </figcaption>
           </picture>
         </figure>
       </div>
 
+<!-- Modal Pastilla 1 -->
+<div class="modal fade" id="modal-nutricion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Nutrición y Recetas Saludables</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          La nutrición saludable es esencial para mantener un cuerpo y mente equilibrados, y las recetas saludables son una excelente herramienta para lograrlo. Incorporar opciones vegetarianas, veganas y sin gluten permite adaptar la alimentación a diferentes necesidades, mientras que el uso de superalimentos como la quinoa, la chía o los frutos secos añade nutrientes clave a la dieta. Platillos como ensaladas coloridas, batidos energéticos o guisos reconfortantes pueden ser deliciosos y nutritivos a la vez, promoviendo un estilo de vida más consciente. Además, pequeños cambios como priorizar ingredientes frescos, reducir el consumo de ultraprocesados y planificar las comidas ayudan a consolidar hábitos que benefician la salud a largo plazo. Una alimentación equilibrada no solo mejora el bienestar físico, sino que también eleva el estado de ánimo y la energía diaria.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+      </div>
+    </div>
+  </div>
+</div>
+
       <div class="col-9 col-md-5 col-xl py-3">
         <figure class="card">
           <picture>
-                <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastillas-img-b.png">
-                <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastillas-img-b.png">
-                <img src="images/pastillas/xl-xxl_pastillas-img-b.png" class="card-img-top" alt="bienestar fisico">
+                <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastilla2.png">
+                <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastilla2.png">
+                <img src="images/pastillas/xl-xxl_pastilla2.png" class="card-img-top" alt="bienestar fisico">
               <figcaption class="card-body">
                 <h3 class="card-title">Bienestar Físico</h3>
                 <p class="card-text">Descubre guías de ejercicios para todos los niveles, desde principiantes hasta expertos, con videos y artículos de yoga, pilates, entrenamiento funcional y ejercicios cardiovasculares. Aprende a integrar la actividad física en tu rutina diaria para un equilibrio saludable.</p>
-                <a href="#" class="btn btn-primary float-end mb-3">Ver más</a>
+                <button type="button" class="btn btn-primary float-end mb-3" data-bs-toggle="modal" data-bs-target="#modal-fisico">Ver más</button>
               </figcaption>
           </picture>
         </figure>
       </div>
 
-      <div class="col-9 col-md-5 col-xl py-3">
-        <figure class="card">
-          <picture>
-              <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastillas-img-c.png">
-              <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastillas-img-c.png">
-              <img src="images/pastillas/xl-xxl_pastillas-img-c.png" class="card-img-top" alt="midfulnes y meditacion">
-            <figcaption class="card-body">
-              <h3 class="card-title">Mindfulness y Meditación</h3>
-              <p class="card-text">Practica técnicas de respiración, meditaciones guiadas y ejercicios de atención plena para reducir el estrés, mejorar la concentración y lograr bienestar y equilibrio mental y una conexión más profunda contigo mismo.</p>
-              <a href="#" class="btn btn-primary float-end mb-3">Ver más</a>
-            </figcaption>
-          </picture>
-        </figure>
+      <!-- Modal Pastilla 2 -->
+      <div class="modal fade" id="modal-fisico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Bienestar Físico</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              
+              El bienestar físico es esencial para una vida saludable, y la actividad física desempeña un papel crucial en su mantenimiento. Incorporar ejercicios adecuados a cada nivel, desde principiantes hasta expertos, facilita el acceso a una rutina que se ajuste a tus necesidades y metas personales. Las prácticas como el yoga y el pilates no solo mejoran la flexibilidad y el control corporal, sino que también reducen el estrés y fomentan la conexión mente-cuerpo. Por otro lado, el entrenamiento funcional y los ejercicios cardiovasculares son ideales para fortalecer músculos, mejorar la resistencia y promover la salud del corazón. A través de guías prácticas, videos explicativos y artículos detallados, puedes aprender técnicas seguras y efectivas para integrar la actividad física en tu vida diaria. Estos hábitos no solo potencian tu energía y equilibrio, sino que también contribuyen al bienestar mental, creando una rutina sostenible que beneficia todos los aspectos de tu salud.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="col-9 col-md-5 col-xl py-3">
         <figure class="card">
           <picture>
-              <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastillas-img-d.png">
-              <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastillas-img-d.png">
-              <img src="images/pastillas/xl-xxl_pastillas-img-d.png" class="card-img-top" alt="cultivos organicos">
+              <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastilla3.png">
+              <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastilla3.png">
+              <img src="images/pastillas/xl-xxl_pastilla3.png" class="card-img-top" alt="midfulnes y meditacion">
             <figcaption class="card-body">
-              <h3 class="card-title">Cultivos Orgánicos y Sostenibilidad</h3>
-              <p class="card-text">Descubre cómo cultivar tus alimentos y aplicar métodos de sostenibilidad en tu hogar con consejos para huertos y técnicas de cultivo orgánico que fomentan la biodiversidad, reducen el impacto ambiental y promueven un estilo de vida con la naturaleza.</p>
-              <a href="#" class="btn btn-primary float-end mb-3">Ver más</a>
+              <h3 class="card-title">Mindfulness y Meditación</h3>
+              <p class="card-text">Practica técnicas de respiración, meditaciones guiadas y ejercicios de atención plena para reducir el estrés, mejorar la concentración y lograr bienestar y equilibrio mental y una conexión más profunda contigo mismo.</p>
+              <button type="button" class="btn btn-primary float-end mb-3" data-bs-toggle="modal" data-bs-target="#modal-meditacion">Ver más</button>
             </figcaption>
           </picture>
         </figure>
       </div>
+
+            <!-- Modal Pastilla 3 -->
+            <div class="modal fade" id="modal-meditacion" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">Mindfulness y Meditación</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    El mindfulness y la meditación son prácticas esenciales para alcanzar un bienestar mental y emocional más profundo en un mundo acelerado. Estas disciplinas combinan técnicas de respiración consciente, meditaciones guiadas y ejercicios de atención plena para ayudarte a vivir en el momento presente, reduciendo el estrés y la ansiedad acumulados. Al enfocarte en el aquí y el ahora, puedes mejorar tu concentración, tomar decisiones con mayor claridad y gestionar las emociones de manera más efectiva. Las meditaciones guiadas son ideales para principiantes, mientras que los ejercicios de respiración te ayudan a relajarte y estabilizar tu mente en momentos de tensión. Dedicar unos minutos al día a estas prácticas no solo fortalece tu conexión contigo mismo, sino que también crea un espacio de calma interior que te permite enfrentar los desafíos de la vida con mayor equilibrio. Con el tiempo, el mindfulness fomenta una actitud más positiva y plena, potenciando tanto tu bienestar como tus relaciones y tu calidad de vida en general.
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+      
+
+      <div class="col-9 col-md-5 col-xl py-3">
+        <figure class="card">
+          <picture>
+              <source media="(max-width: 576px)" srcset="images/pastillas/xs-sm_pastilla4.png">
+              <source media="(max-width: 992px)" srcset="images/pastillas/md-lg_pastilla4.png">
+              <img src="images/pastillas/xl-xxl_pastilla4.png" class="card-img-top" alt="cultivos organicos">
+            <figcaption class="card-body">
+              <h3 class="card-title">Cultivos Orgánicos y Sostenibilidad</h3>
+              <p class="card-text">Descubre cómo cultivar tus alimentos y aplicar métodos de sostenibilidad en tu hogar con consejos para huertos y técnicas de cultivo orgánico que fomentan la biodiversidad, reducen el impacto ambiental y promueven un estilo de vida con la naturaleza.</p>
+              <button type="button" class="btn btn-primary float-end mb-3" data-bs-toggle="modal" data-bs-target="#modal-organico">Ver más</button>
+            </figcaption>
+          </picture>
+        </figure>
+      </div>
+      
+              <!-- Modal Pastilla 4 -->
+      <div class="modal fade" id="modal-organico" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Cultivos Orgánicos y Sostenibilidad</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                  <div class="modal-body">
+                    Los cultivos orgánicos y la sostenibilidad son esenciales para un estilo de vida más conectado con la naturaleza y respetuoso con el medio ambiente. Cultivar tus propios alimentos no solo te ofrece productos frescos y libres de químicos, sino que también reduce la dependencia de cadenas de suministro que generan un gran impacto ambiental. Crear un huerto en casa, incluso en espacios pequeños, te permite aplicar técnicas de cultivo orgánico como el compostaje, la rotación de cultivos y el uso de fertilizantes naturales, lo que favorece la salud del suelo y la biodiversidad. Estos métodos ayudan a preservar la calidad de los alimentos y contribuyen a un equilibrio ecológico al reducir el uso de pesticidas y fertilizantes sintéticos. Además, incorporar prácticas sostenibles en tu hogar, como el riego por goteo o la reutilización de residuos orgánicos, refuerza tu compromiso con el cuidado del planeta. Más allá de los beneficios para el medio ambiente, este enfoque ofrece una experiencia gratificante y educativa, acercándote a los ciclos naturales y promoviendo un estilo de vida más saludable y responsable.
+                  </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Entendido</button>
+                </div>
+            </div>
+          </div>
+        </div>
 
     </div>
 
   </section>
-
-  <!-- modal -->
-  <div class="modal">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" fdprocessedid="1gaf6">
-            <span aria-hidden="true"></span>
-          </button>
-        </div>
-        <div class="modal-body">
-          <p>Modal body text goes here.</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-primary" fdprocessedid="wvpwdb">Save changes</button>
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" fdprocessedid="wux436l">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- seccion articulo -->
     <section class="container"><span id="articulo" class="ancla"></span>
         <article>
           <figure id="nota" class="mt-5">
             <picture>
-                <source media="(max-width: 576px)" srcset="images/nota/xs-sm_imagen-nota.png">
-                <source media="(max-width: 992px)" srcset="images/nota/md-lg_imagen-nota.png">
-                <img src="images/nota/xl-xxl_imagen-nota.png" alt="Imagen descanso y calidad de sueño">
+                <source media="(max-width: 576px)" srcset="images/nota/xs-sm_nota1.png">
+                <source media="(max-width: 992px)" srcset="images/nota/md-lg_nota1.png">
+                <img src="images/nota/xl-xxl_nota1.png" alt="Imagen descanso y calidad de sueño">
             </picture>
           </figure>
 
@@ -208,24 +269,141 @@
               <p>Invertir en un descanso adecuado es una de las mejores decisiones que se pueden tomar para la salud a largo plazo. No se trata solo de la cantidad de horas dormidas, sino de la calidad de ese sueño. Hacer del descanso una prioridad contribuirá a un equilibrio físico y mental, favoreciendo un estilo de vida pleno y saludable.</p>
             </div>
           </div>
+        </div>
         </article>
     </section>
 
+  <!-- Productos -->
+  <section class="product" id="productos" class="ancla">
+    <h2 class="product-category">Nuestros productos naturales</h2>
+    <button class="pre-btn"><img src="images/productos/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/productos/arrow.png" alt=""></button>
+    <div class="product-container">
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/1-jabon.png" class="product-thumb" alt="jabon">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">jabones</h2>
+                <p class="product-short-description">jabones naturales en barra </p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/2-crema.png" class="product-thumb" alt="crema1">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">crema</h2>
+                <p class="product-short-description">crema para manos maracuyá</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/3-perfume.png" class="product-thumb" alt="perfume1">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">perfume</h2>
+                <p class="product-short-description">eau de toilette magnolia</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/4-perfume.png" class="product-thumb" alt="perfume2">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">perfume</h2>
+                <p class="product-short-description">eau de toilette rosa</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/5-shampu.png" class="product-thumb" alt="shampu">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">shampú</h2>
+                <p class="product-short-description">shampú orgánico</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/6-crema2.png" class="product-thumb" alt="crema2">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">jabón</h2>
+                <p class="product-short-description">jabón líquido mango y coco</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/7-exfoliante.png" class="product-thumb" alt="exfoliante">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">exfoliante</h2>
+                <p class="product-short-description">crema exfoliante 200g</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/8-crema.png" class="product-thumb" alt="crema3">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">crema</h2>
+                <p class="product-short-description">loción protectora</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/productos/10-crema.png" class="product-thumb" alt="crema4">
+                <button class="card-btn">agregar a favoritos</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">crema</h2>
+                <p class="product-short-description">crema hidratante nocturno</p>
+                <span class="price">$1000</span><span class="actual-price">$2000</span>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
 
   <!-- seccion link al video -->
-    <section>
-      <span id="video" class="ancla"></span>Titulo de seccion al video</section>
+    <section>Título de sección al video</section>
 
   <!-- seccion formulario -->
-    <section><span id="contacto" class="ancla"></span>Titulo de formulario</section>
+    <section><span id="contacto" class="ancla"></span>Título de formulario</section>
   
   <!-- seccion footer -->
-   <footer><span id="redes" class="ancla"></span>Titulo footer</footer>
+   <footer><span id="redes" class="ancla"></span>Título footer</footer>
 
-    <!--script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script-->
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/animaScroll.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>
